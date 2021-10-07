@@ -46,13 +46,15 @@ dependencies {
 configurations.maybeCreate("default")
 def publishArtifact = artifacts.add("default", file('toastershow-release.aar'))
 
-publishing {
-    publications {
-        aar(MavenPublication) {
-            groupId = 'com.example.toastershow'
-            artifactId = 'toastershow'
-            version = '1.0.0'
-            artifact publishArtifact
+afterEvaluate{
+    publishing {
+        publications {
+            aar(MavenPublication) {
+                groupId = 'com.example.toastershow'
+                artifactId = 'toastershow'
+                version = '1.0.0'
+                artifact publishArtifact
+            }
         }
     }
 }
