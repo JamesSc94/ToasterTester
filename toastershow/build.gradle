@@ -49,8 +49,8 @@ def publishArtifact = artifacts.add("default", file('toastershow-release.aar'))
 publishing {
     publications {
         aar(MavenPublication) {
-            groupId = 'my.sample.artifact'
-            artifactId = 'somerandomname'
+            groupId = 'com.example.toastershow'
+            artifactId = 'toastershow'
             version = '1.0.0'
             artifact publishArtifact
         }
